@@ -94,6 +94,44 @@ void ComputerMove(char board[ROW][COL], int row, int col)
 {
 	printf("电脑下棋:>\n");
 
+	//下某位置赢
+	int i = 0;
+	int j = 0;
+	for (i = 0; i < ROW; i++)
+	{
+		for (j = 0; j < COL; j++)
+		{
+			if (board[i][j] == ' ')
+			{
+				board[i][j] = '#';
+				if (IsWin(board, ROW, COL) == '#')
+				{
+					return;
+				}
+				board[i][j] = ' ';
+			}
+		}
+	}
+
+	//不下某位置输
+	for (i = 0; i < ROW; i++)
+	{
+		for (j = 0; j < COL; j++)
+		{
+			if (board[i][j] == ' ')
+			{
+				board[i][j] = '*';
+				if (IsWin(board, ROW, COL) == '*')
+				{
+					board[i][j] = '#';
+					return;
+				}
+				board[i][j] = ' ';
+			}
+		}
+	}
+
+	//随机下棋
 	int x = 0;
 	int y = 0;
 
