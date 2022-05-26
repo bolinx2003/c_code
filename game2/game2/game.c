@@ -59,14 +59,26 @@ void SetMine(char board[ROWS][COLS], int row, int col)
 
 int get_mine_count(char board[ROWS][COLS], int x, int y)
 {
-	return (board[x - 1][y] +
+	/*return (board[x - 1][y] +
 		board[x - 1][y - 1] +
 		board[x][y - 1] +
 		board[x + 1][y - 1] +
 		board[x + 1][y] +
 		board[x + 1][y + 1] +
 		board[x][y + 1] +
-		board[x - 1][y + 1] - 8 * '0');
+		board[x - 1][y + 1] - 8 * '0');*/
+
+	int i = 0;
+	int count = 0;
+	for (i = -1; i <= 1; i++)
+	{
+		int j = 0;
+		for (j = -1; j <= 1; j++)
+		{
+			count += board[x + i][y + j];
+		}
+	}
+	return count - 9 * '0';
 }
 
 void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
