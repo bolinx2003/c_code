@@ -1,7 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "game.h"
 
-
 void InitBoard(char board[ROW][COL], int row, int col)
 {
 	int i = 0;
@@ -213,9 +212,3 @@ char IsWin(char board[ROW][COL], int row, int col)
 	//ÓÎÏ·¼ÌÐø
 	return 'C';
 }
-
-
-
-
-
-

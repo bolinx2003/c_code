@@ -1,5 +1,4 @@
 #define _CRT_SECURE_NO_WARNINGS
-
 #include "game.h"
 
 void menu()
@@ -52,7 +51,7 @@ void game()
 	DispalyBoard(board, ROW, COL);
 }
 
-int main()
+void test()
 {
 	srand((unsigned int)time(NULL));//设置随机数的生成起点的
 
@@ -75,7 +74,11 @@ int main()
 			break;
 		}
 	} while (input);
+}
 
+int main()
+{
+	test();
 	return 0;
 }
 
