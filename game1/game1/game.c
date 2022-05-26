@@ -76,7 +76,7 @@ void PlayerMove(char board[ROW][COL], int row, int col)
 			if (board[x - 1][y - 1] == ' ')
 			{
 				board[x - 1][y - 1] = '*';
-				break;
+				return;
 			}
 			else
 			{
@@ -93,48 +93,54 @@ void PlayerMove(char board[ROW][COL], int row, int col)
 void ComputerMove(char board[ROW][COL], int row, int col)
 {
 	printf("电脑下棋:>\n");
-
-	//下某位置赢
-	int i = 0;
-	int j = 0;
-	for (i = 0; i < ROW; i++)
-	{
-		for (j = 0; j < COL; j++)
-		{
-			if (board[i][j] == ' ')
-			{
-				board[i][j] = '#';
-				if (IsWin(board, ROW, COL) == '#')
-				{
-					return;
-				}
-				board[i][j] = ' ';
-			}
-		}
-	}
-
-	//不下某位置输
-	for (i = 0; i < ROW; i++)
-	{
-		for (j = 0; j < COL; j++)
-		{
-			if (board[i][j] == ' ')
-			{
-				board[i][j] = '*';
-				if (IsWin(board, ROW, COL) == '*')
-				{
-					board[i][j] = '#';
-					return;
-				}
-				board[i][j] = ' ';
-			}
-		}
-	}
-
-	//随机下棋
 	int x = 0;
 	int y = 0;
 
+	//电脑连成2个
+	for (x = 0; x < row; x++)
+	{
+		for (y = 0; y < col; y++)
+		{
+			if (board[x][y] == ' ')
+			{
+				board[x][y] = '#';
+				if (IsWin(board, row, col) == '#')
+				{
+					return;
+				}
+				board[x][y] = ' ';
+			}
+		}
+	}
+
+	//玩家连成2个
+	for (x = 0; x < row; x++)
+	{
+		for (y = 0; y < col; y++)
+		{
+			if (board[x][y] == ' ')
+			{
+				board[x][y] = '*';
+				if (IsWin(board, row, col) == '*')
+				{
+					board[x][y] = '#';
+					return;
+				}
+				board[x][y] = ' ';
+			}
+		}
+	}
+
+	//占据中间位置
+	x = (row - 1) / 2;
+	y = (col - 1) / 2;
+	if (board[x][y] == ' ')
+	{
+		board[x][y] = '#';
+		return;
+	}
+
+	//随机下棋
 	while (1)
 	{
 		x = rand() % row;//0~2
@@ -142,7 +148,7 @@ void ComputerMove(char board[ROW][COL], int row, int col)
 		if (board[x][y] == ' ')
 		{
 			board[x][y] = '#';
-			break;
+			return;
 		}
 	}
 }
