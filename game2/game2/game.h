@@ -9,8 +9,8 @@
 #define COL 9
 
 //实际创建的行列数
-#define ROWS (ROW+2)
-#define COLS (COL+2)
+#define ROWS (ROW + 2)
+#define COLS (COL + 2)
 
  //雷的个数
 #define EASY_COUNT 10

@@ -157,8 +157,8 @@ static int IsWin(char show[ROWS][COLS], int row, int col)
 			//空格 -> 一定不是雷
 			//数字 -> 一定不是雷
 			//* -> 可能是雷
-			//? -> 可能是雷
-			if (show[i][j] != '*' && show[i][j] != '?')
+			//! -> 可能是雷
+			if (show[i][j] != '*' && show[i][j] != '!')
 			{
 				//一定不是雷
 				count++;
@@ -230,10 +230,10 @@ static void SignMine(char show[ROWS][COLS], int row, int col)
 			{
 				if (show[x][y] == '*')
 				{
-					show[x][y] = '?';
+					show[x][y] = '!';
 					DisplayBoard(show, ROW, COL);
 				}
-				else if (show[x][y] == '?')
+				else if (show[x][y] == '!')
 				{
 					show[x][y] = '*';//取消标记
 					DisplayBoard(show, ROW, COL);
