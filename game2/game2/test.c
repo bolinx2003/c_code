@@ -1,5 +1,4 @@
 #define _CRT_SECURE_NO_WARNINGS
-
 #include "game.h"
 
 void menu()
@@ -24,13 +23,13 @@ void game()
 	SetMine(mine, ROW, COL);
 
 	DisplayBoard(show, ROW, COL);
-	DisplayBoard(mine, ROW, COL);
+	//DisplayBoard(mine, ROW, COL);
 
 	//排查雷
 	FindMine(mine, show, ROW, COL);
 }
 
-int main()
+void test()
 {
 	int input = 0;
 	//设置随机数的生成起点
@@ -54,7 +53,11 @@ int main()
 			break;
 		}
 	} while (input);
+}
 
+int main()
+{
+	test();
 	return 0;
 }
 

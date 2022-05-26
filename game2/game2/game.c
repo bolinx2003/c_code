@@ -1,5 +1,4 @@
 #define _CRT_SECURE_NO_WARNINGS
-
 #include "game.h"
 
 void InitBoard(char board[ROWS][COLS], int rows, int cols, char set)
@@ -128,6 +127,7 @@ static int get_mine_count(char board[ROWS][COLS], int x, int y)
 //		DisplayBoard(mine, ROW, COL);
 //	}
 //}
+//
 
 //
 //基础的功能
