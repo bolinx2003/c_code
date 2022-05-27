@@ -17,7 +17,7 @@ void DispalyBoard(char board[ROW][COL], int row, int col);
 void PlayerMove(char board[ROW][COL], int row, int col);
 
 //电脑下棋
-//找没有下棋的随机下棋
+//找没有下棋的位置随机下棋
 void ComputerMove(char board[ROW][COL], int row, int col);
 
 //
@@ -26,5 +26,4 @@ void ComputerMove(char board[ROW][COL], int row, int col);
 //平局 - 'Q'
 //继续 - 'C'
 //
-
 char IsWin(char board[ROW][COL], int row, int col);
