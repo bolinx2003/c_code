@@ -798,6 +798,99 @@
 //}
 
 
+//求最小公倍数
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	scanf("%d %d", &a, &b);
+//
+//	//求最小公倍数
+//	//方法1：
+//	//假设是大的数
+//	/*int m = a > b ? a : b;
+//	while (m%a!=0 || m%b!=0)
+//	{
+//		m++;
+//	}
+//	printf("%d\n", m);*/
+//
+//	//方法2：
+//	/*int i = 1;
+//	while (a*i%b != 0)
+//	{
+//		i++;
+//	}
+//	printf("%d\n", a * i);*/
+//
+//	//方法3：
+//	int m = 0;
+//	int a1 = a;
+//	int b1 = b;
+//	while (m = a%b)
+//	{
+//		a = b;
+//		b = m;
+//	}
+//	//此时b为最大公约数
+//	printf("%d\n", a1 * b1 / b);
+//
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <string.h>
+//
+//void reverse_string(char* left, char* right)
+//{
+//    while (left < right)
+//    {
+//        char tmp = *left;
+//        *left = *right;
+//        *right = tmp;
+//        left++;
+//        right--;
+//    }
+//}
+//
+//int main()
+//{
+//    char arr[100] = { 0 };
+//    gets(arr);
+//    int len = strlen(arr);
+//
+//    //整体逆序
+//    char* left = arr;
+//    char* right = arr + len - 1;
+//    reverse_string(left, right);
+//
+//    //对每个单词逆序
+//    left = arr;
+//    right = arr;
+//    while (1)
+//    {
+//        while (*right != ' ' && *right != '\0')
+//        {
+//            right++;
+//        }
+//        reverse_string(left, right - 1);
+//        if (*right != '\0')
+//        {
+//            right++;
+//            left = right;
+//        }
+//        else
+//        {
+//            break;
+//        }
+//    }
+//    printf("%s\n", arr);
+//
+//    return 0;
+//}
+//
+
+
 //编写一个函数 reverse_string(char* string)（递归实现）
 //实现：将参数字符串中的字符反向排列，不是逆序打印。
 //要求：不能使用C函数库中的字符串操作函数。
