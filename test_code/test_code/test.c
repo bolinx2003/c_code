@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 
-//
+
 //int main()
 //{
 //    printf("     **     \n");
@@ -12,9 +12,8 @@
 //    printf("    *  *    \n");
 //    return 0;
 //}
-//
 
-//
+
 //#include <stdio.h>
 //
 //int main()
@@ -32,9 +31,8 @@
 //
 //    return 0;
 //}
-//
 
-//
+
 //#include <stdio.h>
 //
 //int main()
@@ -49,9 +47,8 @@
 //
 //    return 0;
 //}
-//
 
-//
+
 //写一个函数求两个整数的较大值
 //int get_max(int x, int y)
 //{
@@ -68,9 +65,8 @@
 //	printf("%d\n", ret);
 //	return 0;
 //}
-//
 
-//
+
 //#include <stdio.h>
 //
 //int main()
@@ -83,9 +79,8 @@
 //    }
 //    return 0;
 //}
-//
 
-//
+
 //#include <stdio.h>
 //
 //int main()
@@ -99,9 +94,8 @@
 //    printf("\nJack    18     man\n");
 //    return 0;
 //}
-//
 
-//
+
 //#include <stdio.h>
 //
 //int main()
@@ -112,9 +106,8 @@
 //    printf("%d %d\n", a / b, a % b);
 //    return 0;
 //}
-//
 
-//
+
 //#include <stdio.h>
 //
 //int main()
@@ -125,9 +118,8 @@
 //
 //    return 0;
 //}
-//
 
-//
+
 //#include <stdio.h>
 //
 //int main()
@@ -145,9 +137,8 @@
 //    }
 //    return 0;
 //}
-//
 
-//
+
 //#include <stdio.h>
 //
 //int main()
@@ -164,9 +155,8 @@
 //
 //    return 0;
 //}
-//
 
-//
+
 //#include <stdio.h>
 //
 //int main()
@@ -180,9 +170,8 @@
 //    }
 //    return 0;
 //}
-//
 
-//
+
 //#include <stdio.h>
 //
 //int max3(int x, int y, int z)
@@ -203,9 +192,8 @@
 //
 //    return 0;
 //}
-//
 
-//
+
 //#include <stdio.h>
 //
 //int main()
@@ -230,9 +218,8 @@
 //    }
 //    return 0;
 //}
-//
 
-//
+
 //#include <stdio.h>
 //
 //int main()
@@ -249,9 +236,8 @@
 //
 //    return 0;
 //}
-//
 
-//
+
 //#include <stdio.h>
 //
 //int main()
@@ -269,9 +255,8 @@
 //
 //    return 0;
 //}
-//
 
-//
+
 //写代码将三个整数数按从大到小输出
 //void Swap(int* px, int* py)
 //{
@@ -297,9 +282,8 @@
 //
 //	return 0;
 //}
-//
 
-//
+
 //写一个代码打印1-100之间所有3的倍数的数字
 //int main()
 //{
@@ -321,9 +305,8 @@
 //	}
 //	return 0;
 //}
-//
 
-//
+
 //给定两个数，求这两个数的最大公约数
 //int main()
 //{
@@ -352,9 +335,8 @@
 //
 //	return 0;
 //}
-//
 
-//
+
 //打印1000年到2000年之间的闰年
 //int main()
 //{
@@ -366,9 +348,8 @@
 //	}
 //	return 0;
 //}
-//
 
-//
+
 //写一个代码：打印100~200之间的素数
 //int main()
 //{
@@ -434,9 +415,8 @@
 //
 //	return 0;
 //}
-//
 
-//
+
 //编写程序数一下 1到 100 的所有整数中出现多少个数字9
 //int main()
 //{
@@ -453,9 +433,8 @@
 //
 //	return 0;
 //}
-//
 
-//
+
 //计算1/1-1/2+1/3-1/4+1/5 …… + 1/99 - 1/100 的值，打印出结果
 //int main()
 //{
@@ -471,9 +450,8 @@
 //
 //	return 0;
 //}
-//
 
-//
+
 //求10 个整数中最大值
 //int main()
 //{
@@ -494,9 +472,8 @@
 //
 //	return 0;
 //}
-//
 
-//
+
 //在屏幕上输出9*9乘法口诀表
 //int main()
 //{
@@ -512,9 +489,8 @@
 //	}
 //	return 0;
 //}
-//
 
-//
+
 //猜数字游戏
 //#include <stdlib.h>
 //#include <time.h>
@@ -579,7 +555,7 @@
 //
 //	return 0;
 //}
-//
+
 
 //
 //编写代码在一个整形有序数组中查找具体的某个数
@@ -621,7 +597,7 @@
 //}
 //
 
-//
+
 //#include <stdio.h>
 //
 //int main()
@@ -636,9 +612,8 @@
 //    }
 //    return 0;
 //}
-//
 
-//
+
 //#include <stdio.h>
 //
 //int main()
@@ -652,9 +627,8 @@
 //    }
 //    return 0;
 //}
-//
 
-//
+
 //#include <stdio.h>
 //
 //int main()
@@ -666,7 +640,6 @@
 //
 //    return 0;
 //}
-//
 
 
 //
@@ -699,7 +672,7 @@
 //}
 //
 
-//
+
 //实现函数判断year是不是润年。
 //int is_leap_year(int y)
 //{
@@ -716,9 +689,8 @@
 //	}
 //	return 0;
 //}
-//
 
-//
+
 //实现一个函数来交换两个整数的内容。
 //void Swap(int* a, int* b)
 //{
@@ -738,7 +710,7 @@
 //	printf("交换后:a=%d b=%d\n", a, b);
 //	return 0;
 //}
-//
+
 
 //
 //实现一个函数，打印乘法口诀表，口诀表的行数和列数自己指定
@@ -767,7 +739,7 @@
 //}
 //
 
-//
+
 //递归方式实现打印一个整数的每一位
 //void Print(int n)
 //{
@@ -784,7 +756,6 @@
 //
 //	return 0;
 //}
-//
 
 
 //
@@ -821,7 +792,7 @@
 //}
 //
 
-//
+
 //递归和非递归分别实现strlen
 //#include <string.h>
 //
@@ -854,9 +825,8 @@
 //
 //	return 0;
 //}
-//
 
-//
+
 //求最小公倍数
 //int main()
 //{
@@ -896,9 +866,8 @@
 //
 //	return 0;
 //}
-//
 
-//
+
 //#include <stdio.h>
 //#include <string.h>
 //
@@ -949,7 +918,6 @@
 //
 //    return 0;
 //}
-//
 
 
 //
@@ -991,9 +959,8 @@
 //	return 0;
 //}
 //
-//
 
-//
+
 //写一个递归函数DigitSum(n)，输入一个非负整数，返回组成它的数字之和
 //int DigitSum(int n)
 //{
@@ -1016,9 +983,8 @@
 //
 //	return 0;
 //}
-//
 
-//
+
 //编写一个函数实现n的k次方，使用递归实现。
 //float Power(int n, int k)
 //{
@@ -1040,7 +1006,7 @@
 //
 //	return 0;
 //}
-//
+
 
 //
 //递归和非递归分别实现求第n个斐波那契数
