@@ -560,6 +560,7 @@
 //
 //编写代码在一个整形有序数组中查找具体的某个数
 //要求：找到了就打印数字所在的下标，找不到则输出：找不到。
+// 
 //int main()
 //{
 //	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
@@ -715,6 +716,7 @@
 //
 //实现一个函数，打印乘法口诀表，口诀表的行数和列数自己指定
 //如：输入9，输出9 * 9口诀表，输出12，输出12 * 12的乘法口诀表。
+// 
 //void print_table(int n)
 //{
 //	int i = 0;
@@ -760,6 +762,7 @@
 
 //
 //递归和非递归分别实现求n的阶乘（不考虑溢出的问题）
+// 
 //非递归
 //int Fac1(int n)
 //{
@@ -924,6 +927,7 @@
 //编写一个函数 reverse_string(char* string)（递归实现）
 //实现：将参数字符串中的字符反向排列，不是逆序打印。
 //要求：不能使用C函数库中的字符串操作函数。
+// 
 //#include <assert.h>
 //
 //int my_strlen(char* str)
@@ -1010,6 +1014,7 @@
 
 //
 //递归和非递归分别实现求第n个斐波那契数
+// 
 //递归
 //int Fib(int n)
 //{
@@ -1044,3 +1049,259 @@
 //	return 0;
 //}
 //
+
+//实现一个对整形数组的冒泡排序
+//void bubble_sort(int arr[], int sz)
+//{
+//	int i = 0;
+//	int flag = 1;//假设已经有序
+//	for (i = 0; i < sz - 1; i++)
+//	{
+//		//一趟冒泡排序
+//		int j = 0;
+//		for (j = 0; j < sz - 1 - i; j++)
+//		{
+//			if (arr[j] > arr[j + 1])
+//			{
+//				flag = 0;
+//				//交换
+//				int tmp = arr[j];
+//				arr[j] = arr[j + 1];
+//				arr[j + 1] = tmp;
+//			}
+//		}
+//		if (1 == flag)
+//		{
+//			return;
+//		}
+//	}
+//}
+//
+//int main()
+//{
+//	int arr[] = { 9,8,7,6,5,4,3,2,1,0 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//
+//	//冒泡排序，排成升序
+//	bubble_sort(arr, sz);
+//
+//	int i = 0;
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//
+//	return 0;
+//}
+
+
+//
+//创建一个整形数组，完成对数组的操作
+//实现函数init() 初始化数组为全0
+//实现print()  打印数组的每个元素
+//实现reverse()  函数完成数组元素的逆置。
+//要求：自己设计以上函数的参数，返回值。
+//
+//void init(int arr[], int sz)
+//{
+//	int i = 0;
+//	for (i = 0; i < sz; i++)
+//	{
+//		arr[i] = 0;
+//	}
+//}
+//
+//void print(int arr[], int sz)
+//{
+//	int i = 0;
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	printf("\n");
+//}
+//
+//void reverse(int* ptr, int sz)
+//{
+//	int* left = ptr;
+//	int* right = ptr + sz - 1;
+//
+//	while (left < right)
+//	{
+//		int tmp = *left;
+//		*left = *right;
+//		*right = tmp;
+//		left++;
+//		right--;
+//	}
+//}
+//
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//
+//	reverse(arr, sz);
+//	print(arr, sz);//10~1
+//	init(arr, sz);
+//	print(arr, sz);//全0
+//
+//	return 0;
+//}
+//
+
+
+//将数组A中的内容和数组B中的内容进行交换。（数组一样大）
+//int main()
+//{
+//	int arr1[5] = { 1,3,5,7,9 };
+//	int arr2[5] = { 2,4,6,8,0 };
+//	int sz = sizeof(arr1) / sizeof(arr1[0]);
+//
+//	int i = 0;
+//	for (i = 0; i < sz; i++)
+//	{
+//		int tmp = arr1[i];
+//		arr1[i] = arr2[i];
+//		arr2[i] = tmp;
+//	}
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr1[i]);
+//	}
+//	printf("\n");
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr2[i]);
+//	}
+//
+//	return 0;
+//}
+
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int a = 0;
+//    int b = 0;
+//    scanf("%d %d", &a, &b);
+//
+//    int count = 0;
+//    int i = 0;
+//    for (i = 0; i < 32; i++)
+//    {
+//        if (((a >> i) & 1) != ((b >> i) & 1))
+//            count++;
+//    }
+//    printf("%d\n", count);
+//
+//    return 0;
+//}
+//
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int a = 0;
+//    int b = 0;
+//    scanf("%d %d", &a, &b);
+//
+//    int count = 0;
+//    int tmp = a ^ b;
+//
+//    //求tmp中1的个数
+//    while (tmp)
+//    {
+//        tmp = tmp & (tmp - 1);//拿走最右边的1
+//        count++;
+//    }
+//    printf("%d\n", count);
+//
+//    return 0;
+//}
+
+
+//获取一个整数二进制序列中所有的偶数位和奇数位，分别打印出二进制序列
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	int i = 0;
+//	//偶数位
+//	for (i = 31; i >= 1; i -= 2)
+//	{
+//		printf("%d ", (n >> i) & 1);
+//	}
+//	printf("\n");
+//	//奇数位
+//	for (i = 30; i >= 0; i -= 2)
+//	{
+//		printf("%d ", (n >> i) & 1);
+//	}
+//
+//	return 0;
+//}
+
+
+//int NumberOf1(int n) {
+//    int i = 0;
+//    int count = 0;
+//    for (i = 0; i < 32; i++)
+//    {
+//        if (((n >> i) & 1) == 1)
+//            count++;
+//    }
+//    return count;
+//}
+//
+//int NumberOf1(int n) {
+//    unsigned int m = (unsigned int)n;
+//    int count = 0;
+//
+//    while (m)
+//    {
+//        if (m % 2 == 1)
+//            count++;
+//        m /= 2;
+//    }
+//    return count;
+//}
+//
+//int NumberOf1(int n) {
+//    int count = 0;
+//    while (n)
+//    {
+//        n = n & (n - 1);//去掉最右边的1
+//        count++;
+//    }
+//    return count;
+//}
+
+//不允许创建临时变量，交换两个整数的内容
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	scanf("%d %d", &a, &b);
+//	printf("交换前:a=%d,b=%d\n", a, b);
+//	//交换
+//	a = a ^ b;
+//	b = a ^ b;
+//	a = a ^ b;
+//	printf("交换后:a=%d,b=%d\n", a, b);
+//
+//	return 0;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
