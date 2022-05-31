@@ -1295,6 +1295,409 @@
 //}
 
 
+//
+//写一个函数打印arr数组的内容，不使用数组下标，使用指针。
+//arr是一个整形一维数组。
+//
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int* p = arr;
+//
+//	int i = 0;
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", *(p + i));
+//	}
+//	return 0;
+//}
+//
+
+
+//#include <stdio.h>
+//#include <string.h>
+//
+//void reverse_string(char* str)
+//{
+//    int len = strlen(str);
+//    char* left = str;
+//    char* right = str + len - 1;
+//
+//    while (left < right)
+//    {
+//        char tmp = *left;
+//        *left = *right;
+//        *right = tmp;
+//        left++;
+//        right--;
+//    }
+//}
+//
+//int main()
+//{
+//    char arr[10001] = { 0 };
+//    gets(arr);
+//
+//    reverse_string(arr);
+//    printf("%s\n", arr);
+//
+//    return 0;
+//}
+
+
+//
+//求Sn = a + aa + aaa + aaaa + aaaaa的前5项之和，其中a是一个数字，
+//例如：2 + 22 + 222 + 2222 + 22222
+//
+//int main()
+//{
+//	int a = 0;
+//	scanf("%d", &a);
+//	int n = 0;
+//	int i = 0;
+//	int sum = 0;
+//	for (i = 0; i < 5; i++)
+//	{
+//		n = n * 10 + a;
+//		sum += n;
+//	}
+//	printf("%d\n", sum);
+//
+//	return 0;
+//}
+//
+
+
+//
+//求出0～100000之间的所有“水仙花数”并输出。
+//“水仙花数”是指一个n位数，其各位数字的n次方之和确好等于该数本身，如 : 153＝1 ^ 3＋5 ^ 3＋3 ^ 3，则153是一个“水仙花数”。
+//
+//#include <math.h>
+//int main()
+//{
+//	int i = 0;
+//	for (i = 0; i <= 100000; i++)
+//	{
+//		//计算i的位数
+//		int tmp = i;
+//		int n = 1;
+//		while (tmp /= 10)
+//		{
+//			n++;
+//		}
+//		
+//		int sum = 0;
+//		tmp = i;
+//		while (tmp)
+//		{
+//			sum += (int)pow(tmp % 10, n);
+//			tmp /= 10;
+//		}
+//		if (sum == i)
+//		{
+//			printf("%d ", i);
+//		}
+//	}
+//
+//	return 0;
+//}
+//
+//
+
+
+//int main()
+//{
+//	int n = 0;//上半部分共几行
+//	scanf("%d", &n);
+//
+//	//上半部分
+//	int i = 0;
+//	int j = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		for (j = 0; j < n - 1 - i; j++)
+//		{
+//			printf(" ");
+//		}
+//
+//		for (j = 0; j < 2 * i + 1; j++)
+//		{
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//
+//	//下半部分
+//	for (i = 0; i < n - 1; i++)
+//	{
+//		for (j = 0; j < i + 1; j++)
+//		{
+//			printf(" ");
+//		}
+//
+//		for (j = 0; j < 2 * (n - i) - 3; j++)
+//		{
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//
+//	return 0;
+//}
+//
+
+
+//喝汽水，1瓶汽水1元，2个空瓶可以换一瓶汽水，给20元，可以多少汽水（编程实现）。
+//int main()
+//{
+//	int money = 0;
+//	scanf("%d", &money);//20
+//	int total = 0;
+//	if (money >= 1)
+//	{
+//		//买汽水 - 20
+//		total = money;
+//		//空瓶 - 20
+//		int bottle = total;
+//
+//		//2个空瓶以上才可以换
+//		while (bottle >= 2)
+//		{
+//			//拿空瓶来换
+//			total += (bottle / 2);
+//			bottle -= (bottle / 2);
+//		}
+//	}
+//	else
+//	{
+//		total = 0;
+//	}
+//	printf("%d\n", total);
+//
+//	return 0;
+//}
+//
+
+
+//
+//输入一个整数数组，实现一个函数，
+//来调整该数组中数字的顺序使得数组中所有的奇数位于数组的前半部分，
+//所有偶数位于数组的后半部分。
+//
+//int main()
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//
+//	int* left = arr;
+//	int* right = arr + sz - 1;
+//
+//	while (left < right)
+//	{
+//		//前面找一个偶数
+//		if (((*left) % 2 == 1) && (left < right))
+//		{
+//			left++;
+//		}
+//		//后面找一个奇数
+//		if (((*right) % 2 == 0) && (left < right))
+//		{
+//			right--;
+//		}
+//		if (left < right)
+//		{
+//			int tmp = *left;
+//			*left = *right;
+//			*right = tmp;
+//		}
+//	}
+//	int i = 0;
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//
+//	return 0;
+//}
+//
+//
+
+
+//模拟实现库函数strlen
+//#include <string.h>
+//#include <assert.h>
+//
+//int my_strlen(const char* str)
+//{
+//	assert(str != NULL);
+//	int count = 0;
+//	while (*str != '\0')
+//	{
+//		count++;
+//		str++;
+//	}
+//	return count;
+//}
+//
+//int main()
+//{
+//	char arr[] = "abcdef";
+//	int len = my_strlen(arr);
+//	printf("%d\n", len);
+//
+//	return 0;
+//}
+//
+
+
+//模拟实现库函数strcpy
+//#include <string.h>
+//#include <assert.h>
+//
+//char* my_strcpy(char* dest, const char* src)
+//{
+//	assert(dest && src);
+//	char* ret = dest;
+//	while (*dest++ = *src++)
+//	{
+//		;
+//	}
+//	return dest;
+//}
+//
+//int main()
+//{
+//	char arr1[] = "abcdefg";
+//	char arr2[20] = { 0 };
+//
+//	my_strcpy(arr2, arr1);
+//	printf("%s\n", arr2);
+//
+//	return 0;
+//}
+//
+
+
+//
+//在屏幕上打印杨辉三角。
+//1
+//1 1
+//1 2 1
+//1 3 3 1
+//……
+//
+//int main()
+//{
+//	int arr[9][9] = { 0 };
+//	int i = 0;
+//	int j = 0;
+//	for (i = 0; i < 9; i++)
+//	{
+//		for (j = 0; j <= i; j++)
+//		{
+//			//第一列
+//			if (j == 0)
+//			{
+//				arr[i][j] = 1;
+//			}
+//			//主对角线
+//			if (i == j)
+//			{
+//				arr[i][j] = 1;
+//			}
+//			if (j > 0)
+//			{
+//				arr[i][j] = arr[i - 1][j - 1] + arr[i - 1][j];
+//			}
+//			printf("%d ", arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+//
+//
+
+//
+//日本某地发生了一件谋杀案，警察通过排查确定杀人凶手必为4个嫌疑犯的一个。
+//以下为4个嫌疑犯的供词:
+//A说：不是我。
+//B说：是C。
+//C说：是D。
+//D说：C在胡说
+//已知3个人说了真话，1个人说的是假话。
+//现在请根据这些信息，写一个程序来确定到底谁是凶手。
+//
+//int main()
+//{
+//	char murderer = 0;
+//	for (murderer = 'A'; murderer <= 'D'; murderer++)
+//	{
+//		if ((murderer != 'A') + (murderer == 'C') + (murderer == 'D') + (murderer != 'D') == 3)
+//		{
+//			printf("%c\n", murderer);
+//		}
+//	}
+//	return 0;
+//}
+//
+//
+
+
+//
+//5位运动员参加了10米台跳水比赛，有人让他们预测比赛结果：
+//A选手说：B第二，我第三；
+//B选手说：我第二，E第四；
+//C选手说：我第一，D第二；
+//D选手说：C最后，我第三；
+//E选手说：我第四，A第一；
+//比赛结束后，每位选手都说对了一半，请编程确定比赛的名次。
+//
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	int c = 0;
+//	int d = 0;
+//	int e = 0;
+//	for (a = 1; a <= 5; a++)
+//	{
+//		for (b = 1; b <= 5; b++)
+//		{
+//			for (c = 1; c <= 5; c++)
+//			{
+//				for (d = 1; d <= 5; d++)
+//				{
+//					for (e = 1; e <= 5; e++)
+//					{
+//						if (((b == 2) + (a == 3) == 1)
+//							&& ((b == 2) + (e == 4) == 1)
+//							&& ((c == 1) + (d == 2) == 1)
+//							&& ((c == 5) + (d == 3) == 1)
+//							&& ((e == 4) + (a == 1) == 1)
+//							&& a * b * c * d * e == 1 * 2 * 3 * 4 * 5)
+//						{
+//							printf("%d %d %d %d %d\n", a, b, c, d, e);
+//						}
+//					}
+//				}
+//			}
+//		}
+//	}
+//	
+//	return 0;
+//}
+//
+//
+
+
+
+
+
+
+
+
 
 
 
