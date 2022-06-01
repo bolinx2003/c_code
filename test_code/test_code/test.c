@@ -1692,6 +1692,83 @@
 //
 
 
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int n = 0;
+//    scanf("%d", &n);
+//    printf("%d\n", 1 << n);
+//
+//    return 0;
+//}
+
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int score = 0;
+//    int sum = 0;
+//    int count = 0;
+//    int max = 0;
+//    int min = 100;
+//    while (~scanf("%d", &score))
+//    {
+//        sum += score;
+//        count++;
+//        if (score > max)
+//        {
+//            max = score;
+//        }
+//        if (score < min)
+//        {
+//            min = score;
+//        }
+//        if (count == 7)
+//        {
+//            printf("%.2f\n", (sum - max - min) / 5.0);
+//            max = 0;
+//            min = 100;
+//            sum = 0;
+//            count = 0;
+//        }
+//    }
+//
+//    return 0;
+//}
+//
+
+
+//#include <stdio.h>
+//
+//int is_leap_year(int year)
+//{
+//    return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+//}
+//
+//int main()
+//{
+//    int year = 0;
+//    int month = 0;
+//    int day = 0;
+//    int days[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+//    while (~scanf("%d %d", &year, &month))
+//    {
+//        //ÈòÄê¶şÔÂ
+//        if (is_leap_year(year) == 1 && month == 2)
+//        {
+//            day = 29;
+//        }
+//        else
+//        {
+//            day = days[month - 1];
+//        }
+//        printf("%d\n", day);
+//    }
+//    return 0;
+//}
+
 
 
 
