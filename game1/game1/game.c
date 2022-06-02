@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
+
 #include "game.h"
 
 void InitBoard(char board[ROW][COL], int row, int col)
@@ -152,9 +153,11 @@ void ComputerMove(char board[ROW][COL], int row, int col)
 	}
 }
 
+//
 //满了就返回1
 //不满  返回0
-int IsFull(char board[ROW][COL], int row, int col)
+//
+static int IsFull(char board[ROW][COL], int row, int col)
 {
 	int i = 0;
 	int j = 0;
@@ -192,6 +195,7 @@ char IsWin(char board[ROW][COL], int row, int col)
 			return board[1][j];
 		}
 	}
+
 	//对角线
 	if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[1][1] != ' ')
 	{

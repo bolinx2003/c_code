@@ -17,10 +17,10 @@ void DispalyBoard(char board[ROW][COL], int row, int col);
 void PlayerMove(char board[ROW][COL], int row, int col);
 
 //电脑下棋
-//找没有下棋的位置随机下棋
 void ComputerMove(char board[ROW][COL], int row, int col);
 
 //
+//判断局面的函数
 //玩家赢 - '*'
 //电脑赢 - '#'
 //平局 - 'Q'

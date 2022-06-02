@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
+
 #include "game.h"
 
 void menu()
@@ -79,5 +80,6 @@ void test()
 int main()
 {
 	test();
+
 	return 0;
 }
