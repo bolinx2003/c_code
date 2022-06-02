@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
+
 #include "game.h"
 
 void InitBoard(char board[ROWS][COLS], int rows, int cols, char set)
@@ -35,7 +36,6 @@ void DisplayBoard(char board[ROWS][COLS], int row, int col)
 		printf("\n");
 	}
 	printf("-------É¨À×ÓÎÏ·-----\n");
-
 }
 
 void SetMine(char board[ROWS][COLS], int row, int col)
