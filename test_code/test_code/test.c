@@ -1770,7 +1770,41 @@
 //}
 
 
+//#include <stdio.h>
+//
+//int main()
+//{
+//    char ch = 0;
+//    scanf("%c", &ch);
+//    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+//        printf("YES\n");
+//    else
+//        printf("NO\n");
+//
+//    return 0;
+//}
 
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int i = 0;
+//    for (i = 10000; i <= 99999; i++)
+//    {
+//        int sum = 0;
+//        int tmp = i;
+//        int n = 0;
+//        for (n = 10; n <= 10000; n *= 10)
+//        {
+//            sum = sum + (tmp % n) * (tmp / n);
+//        }
+//        if (sum == i)
+//            printf("%d ", i);
+//    }
+//
+//    return 0;
+//}
 
 
 
