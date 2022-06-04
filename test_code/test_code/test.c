@@ -1807,6 +1807,256 @@
 //}
 
 
+//实现一个函数，可以左旋字符串中的k个字符。
+//#include <string.h>
+//void reverse(char* left, char* right)
+//{
+//	while (left < right)
+//	{
+//		char tmp = *left;
+//		*left = *right;
+//		*right = tmp;
+//		left++;
+//		right--;
+//	}
+//}
+//
+//void left_move(char* str, int k)
+//{
+//	int len = strlen(str);
+//	k %= len;
+//	reverse(str, str + k - 1);
+//	reverse(str + k, str + len - 1);
+//	reverse(str, str + len - 1);
+//}
+//
+//int main()
+//{
+//	char arr[] = "abcdefg";
+//	int k = 0;
+//	scanf("%d", &k);
+//
+//	left_move(arr, k);
+//	printf("%s\n", arr);
+//
+//	return 0;
+//}
+
+
+//
+//有一个数字矩阵，矩阵的每行从左到右是递增的，
+//矩阵从上到下是递增的，
+//请编写程序在这样的矩阵中查找某个数字是否存在。
+//要求：时间复杂度小于O(N);
+//
+//void find_k(int arr[3][3], int k, int* px, int* py)
+//{
+//	//右上角
+//	int x = 0;
+//	int y = *py - 1;
+//	while (x<*px && y>=0)
+//	{
+//		if (arr[x][y] < k)
+//		{
+//			x++;
+//		}
+//		else if (arr[x][y] > k)
+//		{
+//			y--;
+//		}
+//		else
+//		{
+//			//找到了
+//			*px = x;
+//			*py = y;
+//			return;
+//		}
+//	}
+//	//找不到
+//	*px = -1;
+//	*py = -1;
+//}
+//
+//int main()
+//{
+//	int arr[3][3] = { {1,2,3},{4,5,6}, {7,8,9} };
+//	int x = sizeof(arr) / sizeof(arr[0]);
+//	int y = sizeof(arr[0]) / sizeof(arr[0][0]);
+//
+//	int k = 0;
+//	scanf("%d", &k);
+//
+//	find_k(arr, k, &x, &y);
+//	if (x == -1 && y == -1)
+//	{
+//		printf("找不到了\n");
+//	}
+//	else
+//	{
+//		printf("找到了，下标是%d %d\n", x, y);
+//	}
+//
+//	return 0;
+//}
+//
+//
+
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int n = 0;
+//    while (~scanf("%d", &n))
+//    {
+//        int i = 0;
+//        for (i = 0; i < n; i++)
+//        {
+//            int j = 0;
+//            for (j = 0; j <= i; j++)
+//            {
+//                if (j == 0 || i == n - 1 || i == j)
+//                {
+//                    printf("* ");
+//                }
+//                else
+//                {
+//                    printf("  ");
+//                }
+//            }
+//            printf("\n");
+//        }
+//    }
+//
+//    return 0;
+//}
+
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int n = 0;
+//    int m = 0;
+//    scanf("%d %d", &n, &m);
+//    int arr1[n];
+//    int arr2[m];
+//
+//    int i = 0;
+//    int j = 0;
+//    for (i = 0; i < n; i++)
+//    {
+//        scanf("%d", &arr1[i]);
+//    }
+//    for (i = 0; i < m; i++)
+//    {
+//        scanf("%d", &arr2[i]);
+//    }
+//
+//    i = 0;
+//    j = 0;
+//    while (i < n && j < m)
+//    {
+//        if (arr1[i] < arr2[j])
+//        {
+//            printf("%d ", arr1[i]);
+//            i++;
+//        }
+//        else
+//        {
+//            printf("%d ", arr2[j]);
+//            j++;
+//        }
+//    }
+//
+//    if (i == n)
+//    {
+//        for (; j < m; j++)
+//        {
+//            printf("%d ", arr2[j]);
+//        }
+//    }
+//    else
+//    {
+//        for (; i < n; i++)
+//        {
+//            printf("%d ", arr1[i]);
+//        }
+//    }
+//
+//    return 0;
+//}
+
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int n = 0;
+//    scanf("%d", &n);
+//    int arr[n];
+//    int del = 0;
+//
+//    int i = 0;
+//    int j = 0;
+//    for (i = 0; i < n; i++)
+//    {
+//        scanf("%d", &arr[i]);
+//    }
+//    scanf("%d", &del);
+//
+//    i = 0;//遍历数组
+//    j = 0;//可以保存的位置
+//
+//    for (i = 0; i < n; i++)
+//    {
+//        if (arr[i] != del)
+//        {
+//            arr[j] = arr[i];
+//            j++;
+//        }
+//    }
+//
+//    for (i = 0; i < j; i++)
+//    {
+//        printf("%d ", arr[i]);
+//    }
+//
+//    return 0;
+//}
+
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int n = 0;
+//    while (~scanf("%d", &n))
+//    {
+//        int i = 0;
+//        for (i = 0; i < n; i++)
+//        {
+//            int j = 0;
+//            for (j = 0; j < n; j++)
+//            {
+//                if (i == j || i + j == n - 1)
+//                {
+//                    printf("*");
+//                }
+//                else
+//                {
+//                    printf(" ");
+//                }
+//            }
+//            printf("\n");
+//        }
+//    }
+//
+//    return 0;
+//}
+
+
+
 
 
 
