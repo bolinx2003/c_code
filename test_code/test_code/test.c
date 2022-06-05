@@ -2056,6 +2056,185 @@
 //}
 
 
+//
+//写一个函数，判断一个字符串是否为另外一个字符串旋转之后的字符串。
+//例如：给定s1 = AABCD和s2 = BCDAA，返回1
+//给定s1 = abcd和s2 = ACBD，返回0.
+//AABCD左旋一个字符得到ABCDA
+//AABCD左旋两个字符得到BCDAA
+//AABCD右旋一个字符得到DAABC
+//
+//#include <assert.h>
+//#include <string.h>
+//#include <stdlib.h>
+//
+//int is_left_move(const char* s1, const char* s2)
+//{
+//	assert(s1 && s2);
+//
+//	if (strlen(s1) != strlen(s2))
+//	{
+//		return 0;
+//	}
+//
+//	char* buf = (char*)malloc(strlen(s1) * 2 + 1);
+//	if (buf == NULL)
+//	{
+//		perror("is_left_move::malloc");
+//		return;
+//	}
+//	strcpy(buf, s1);
+//	strncat(buf, s1, strlen(s1));
+//	char* ret = strstr(buf, s2);
+//	free(buf);
+//	buf = NULL;
+//	if (ret == NULL)
+//	{
+//		return 0;
+//	}
+//	else
+//	{
+//		return 1;
+//	}
+//}
+//
+//int main()
+//{
+//	char* s1 = "AABCD";
+//	char* s2 = "BCDAA";
+//
+//	int ret = is_left_move(s1, s2);
+//	if (ret == 1)
+//	{
+//		printf("yes\n");
+//	}
+//	else
+//	{
+//		printf("no\n");
+//	}
+//
+//	return 0;
+//}
+//
+//
+
+
+//模仿qsort的功能实现一个通用的冒泡排序
+//#include <stdlib.h>
+//#include <string.h>
+//#include <assert.h>
+//
+//int cmp_int(const void* e1, const void* e2)
+//{
+//	assert(e1 && e2);
+//
+//	return *(int*)e1 - *(int*)e2;
+//}
+//
+//void Swap(void* e1, void* e2, int width)
+//{
+//	assert(e1 && e2);
+//
+//	void* buf = malloc(width);
+//	if (buf == NULL)
+//	{
+//		perror("malloc");
+//		return;
+//	}
+//
+//	memcpy(buf, e1, width);
+//	memcpy(e1, e2, width);
+//	memcpy(e2, buf, width);
+//
+//	free(buf);
+//	buf = NULL;
+//}
+//
+//void bubble_sort(void* base, int sz, int width, int (*p)(const void*, const void*))
+//{
+//	assert(p != NULL);
+//
+//	int i = 0;
+//	int flag = 1;
+//	for (i = 0; i < sz - 1; i++)
+//	{
+//		int j = 0;
+//		for (j = 0; j < sz - 1 - i; j++)
+//		{
+//			if ((*p)((char*)base + j * width, (char*)base + (j + 1) * width) > 0)
+//			{
+//				flag = 0;
+//				Swap((char*)base + j * width, (char*)base + (j + 1) * width, width);
+//			}
+//		}
+//		if (flag == 1)
+//			return;
+//	}
+//}
+//
+//void test1()
+//{
+//	int arr[] = { 9,8,7,6,5,4,3,2,1,0 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//
+//	//qsort(arr, sz, sizeof(arr[0]), cmp_int);
+//	bubble_sort(arr, sz, sizeof(arr[0]), cmp_int);
+//
+//	int i = 0;
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//}
+//
+//struct Stu
+//{
+//	char name[20];
+//	float score;
+//} s1 = { "张三", 50.5f },
+//s2 = { "李四", 64.5f },
+//s3 = { "王五", 45.0f };
+//
+//int cmp_by_score(const void* e1, const void* e2)
+//{
+//	assert(e1 && e2);
+//
+//	return ((struct Stu*)e1)->score - ((struct Stu*)e2)->score;
+//}
+//
+//void print(struct Stu* ps)
+//{
+//	assert(ps != NULL);
+//
+//	printf("%s %f\n", ps->name, ps->score);
+//}
+//
+//void test2()
+//{
+//	struct Stu s[] = { s1, s2, s3 };
+//	int sz = sizeof(s) / sizeof(s[0]);
+//	qsort(s, sz, sizeof(s[0]), cmp_by_score);
+//	int i = 0;
+//	for (i = 0; i < sz; i++)
+//	{
+//		print(&s[i]);
+//	}
+//}
+//
+//int main()
+//{
+//	test2();
+//
+//	return 0;
+//}
+//
+
+
+
+
+
+
+
 
 
 
