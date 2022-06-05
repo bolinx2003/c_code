@@ -2119,7 +2119,9 @@
 //
 
 
+//
 //模仿qsort的功能实现一个通用的冒泡排序
+// 
 //#include <stdlib.h>
 //#include <string.h>
 //#include <assert.h>
@@ -2230,12 +2232,60 @@
 //
 
 
+//模拟实现strlen
+//#include <string.h>
+//#include <assert.h>
+//
+//int my_strlen(const char* str)
+//{
+//	assert(str != NULL);
+//
+//	int count = 0;
+//	while (*str != '\0')
+//	{
+//		count++;
+//		str++;
+//	}
+//	return count;
+//}
+//
+//int main()
+//{
+//	char arr[] = "abcde";
+//	int len = my_strlen(arr);
+//	printf("%d\n", len);
+//
+//	return 0;
+//}
+//
 
 
-
-
-
-
+//模拟实现strcpy
+//#include <string.h>
+//#include <assert.h>
+//
+//char* my_strcpy(char* dest, const char* src)
+//{
+//	assert(dest && src);
+//
+//	char* ret = dest;
+//	while (*dest++ = *src++)
+//	{
+//		;
+//	}
+//	return ret;
+//}
+//
+//int main()
+//{
+//	char arr1[] = "abcdef";
+//	char arr2[20] = { 0 };
+//	//my_strcpy(arr2, arr1);
+//
+//	printf("%s\n", my_strcpy(arr2, arr1));
+//	
+//	return 0;
+//}
 
 
 
