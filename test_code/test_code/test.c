@@ -2288,12 +2288,135 @@
 //}
 
 
+//模拟实现strcmp
+//#include <string.h>
+//#include <assert.h>
+//
+//int my_strcmp(const char* s1, const char* s2)
+//{
+//	assert(s1 && s2);
+//
+//	while (*s1 == *s2)
+//	{
+//		if (*s1 == '\0' && *s2 == '\0')
+//		{
+//			return 0;
+//		}
+//		s1++;
+//		s2++;
+//	}
+//	return *s1 - *s2;
+//}
+//
+//int main()
+//{
+//	int ret = my_strcmp("abcdef", "abcq");
+//	if (ret > 0)
+//	{
+//		printf(">\n");
+//	}
+//	else if (ret == 0)
+//	{
+//		printf("=\n");
+//	}
+//	else
+//	{
+//		printf("<\n");
+//	}
+//	return 0;
+//}
 
 
+//模拟实现strcat
+//#include <string.h>
+//#include <assert.h>
+//
+//char* my_strcat(char* dest, const char* src)
+//{
+//	assert(dest && src);
+//
+//	char* ret = dest;
+//	//找\0
+//	while (*dest)
+//	{
+//		dest++;
+//	}
+//	//拷贝
+//	while (*dest++ = *src++)
+//	{
+//		;
+//	}
+//	return ret;
+//}
+//
+//int main()
+//{
+//	char arr1[30] = "hello";
+//	char arr2[] = " world!";
+//
+//	my_strcat(arr1, arr2);
+//	printf("%s\n", arr1);
+//
+//	return 0;
+//}
+//
 
 
+//模拟实现strstr
+//#include <string.h>
+//#include <assert.h>
+//
+//char* my_strstr(const char* str1, const char* str2)
+//{
+//	assert(str1 && str2);
+//
+//	const char* s1 = str1;
+//	const char* s2 = str2;
+//	const char* cur = str1;
+//
+//	while (*cur)
+//	{
+//		//回退
+//		s1 = cur;
+//		s2 = str2;
+//		while (s1 && s2 && (*s1 == *s2))
+//		{
+//			s1++;
+//			s2++;
+//		}
+//		if (*s2 == '\0')
+//		{
+//			return (char*)cur;
+//		}
+//		cur++;
+//	}
+//	return NULL;
+//}
+//
+//int main()
+//{
+//	char arr1[] = "bbc";
+//	char arr2[] = "abcabbbcde";
+//	char* ret = my_strstr(arr2, arr1);
+//	if (ret == NULL)
+//	{
+//		printf("找不到\n");
+//	}
+//	else
+//	{
+//		printf("找到了\n%s\n", ret);
+//	}
+//
+//	return 0;
+//}
+//
 
 
+//模拟实现memmove
+//int main()
+//{
+//	return 0;
+//}
 
 
 
