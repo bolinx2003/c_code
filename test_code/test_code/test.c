@@ -2413,10 +2413,110 @@
 
 
 //模拟实现memmove
+//#include <string.h>
+//#include <assert.h>
+//
+//void* my_memmove(void* dest, const void* src, int count)
+//{
+//	assert(dest && src);
+//
+//	void* ret = dest;
+//	if (dest > src)
+//	{
+//		//从右到左
+//		while (count--)
+//		{
+//			*((char*)dest + count) = *((char*)src + count);
+//		}
+//	}
+//	else
+//	{
+//		//从左到右
+//		while (count--)
+//		{
+//			*(char*)dest = *(char*)src;
+//			dest = (char*)dest + 1;
+//			src = (char*)src + 1;
+//		}
+//	}
+//	return ret;
+//}
+//
 //int main()
 //{
+//	int arr1[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	my_memmove(arr1 + 2, arr1, 5 * sizeof(arr1[0]));
+//	int sz = sizeof(arr1) / sizeof(arr1[0]);
+//	int i = 0;
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr1[i]);
+//	}
+//	printf("\n");
+//
+//	int arr2[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	my_memmove(arr2, arr2 + 2, 5 * sizeof(arr2[0]));
+//	sz = sizeof(arr2) / sizeof(arr2[0]);
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr2[i]);
+//	}
+//	
 //	return 0;
 //}
+//
+
+//模拟实现memcpy
+//#include <string.h>
+//#include <assert.h>
+//
+//void* my_memcpy(void* dest, const void* src, int count)
+//{
+//	assert(dest && src);
+//
+//	void* ret = dest;
+//
+//	//从左到右
+//	while (count--)
+//	{
+//		*(char*)dest = *(char*)src;
+//		dest = (char*)dest + 1;
+//		src = (char*)src + 1;
+//	}
+//
+//	return ret;
+//}
+//
+//int main()
+//{
+//	int arr1[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int arr2[20] = { 0 };
+//	my_memcpy(arr2, arr1, 10 * sizeof(arr1[0]));
+//
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", arr2[i]);
+//	}
+//
+//	return 0;
+//}
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
