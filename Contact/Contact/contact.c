@@ -2,6 +2,7 @@
 
 #include "contact.h"
 
+//
 //静态的版本
 //void InitContact(struct Contact* pc)
 //{
@@ -11,6 +12,7 @@
 //	//memset(pc->data, 0, MAX*sizeof(struct PeoInfo));
 //	memset(pc->data, 0, sizeof(pc->data));
 //}
+//
 
 void CheckCapacity(struct Contact* pc)
 {
@@ -75,6 +77,7 @@ void InitContact(struct Contact* pc)
 	LoadContact(pc);
 }
 
+//
 //静态的版本
 //void AddContact(struct Contact* pc)
 //{
@@ -128,6 +131,7 @@ void InitContact(struct Contact* pc)
 //	//	pc->sz++;
 //	//}
 //}
+//
 
 //动态增长的版本
 void AddContact(struct Contact* pc)
