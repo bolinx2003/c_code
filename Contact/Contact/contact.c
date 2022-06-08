@@ -5,6 +5,7 @@
 //静态的版本
 //void InitContact(struct Contact* pc)
 //{
+//  assert(pc);
 //	pc->sz = 0;//默认没有信息
 //	//memset(pc->data, 0, MAX*sizeof(struct PeoInfo));
 //	memset(pc->data, 0, sizeof(pc->data));
@@ -12,6 +13,8 @@
 
 void CheckCapacity(struct Contact* pc)
 {
+	assert(pc);
+
 	if (pc->sz == pc->capacity)
 	{
 		//增加容量
@@ -33,6 +36,8 @@ void CheckCapacity(struct Contact* pc)
 
 void LoadContact(struct Contact* pc)
 {
+	assert(pc);
+
 	//打开文件
 	FILE* pf = fopen("contact.txt", "rb");
 	if (NULL == pf)
@@ -59,6 +64,8 @@ void LoadContact(struct Contact* pc)
 //动态的版本
 void InitContact(struct Contact* pc)
 {
+	assert(pc);
+
 	pc->sz = 0;
 	pc->data = (struct PeoInfo*)malloc(DEFAULT_SZ * sizeof(struct PeoInfo));
 	pc->capacity = DEFAULT_SZ;//3
@@ -70,6 +77,8 @@ void InitContact(struct Contact* pc)
 //静态的版本
 //void AddContact(struct Contact* pc)
 //{
+//  assert(pc);
+// 
 //	struct PeoInfo tmp = {0};
 //
 //	if (pc->sz == MAX)
@@ -122,6 +131,8 @@ void InitContact(struct Contact* pc)
 //动态增长的版本
 void AddContact(struct Contact* pc)
 {
+	assert(pc);
+
 	CheckCapacity(pc);
 	//录入新增人的信息
 	printf("请输入名字:>");
@@ -141,6 +152,8 @@ void AddContact(struct Contact* pc)
 
 void DestroyContact(struct Contact* pc)
 {
+	assert(pc);
+
 	free(pc->data);
 	pc->data = NULL;
 	pc->capacity = 0;
@@ -149,6 +162,8 @@ void DestroyContact(struct Contact* pc)
 
 void ShowContact(struct Contact* pc)
 {
+	assert(pc);
+
 	int i = 0;
 	printf("%15s\t%5s\t%8s\t%15s\t%30s\n\n",
 		"name", "age", "sex", "tele", "addr");
@@ -166,6 +181,7 @@ void ShowContact(struct Contact* pc)
 
 int FindContactByName(const struct Contact* pc, const char* name)
 {
+	assert(pc && name);
 	int i = 0;
 	for (i = 0; i < pc->sz; i++)
 	{
@@ -180,6 +196,8 @@ int FindContactByName(const struct Contact* pc, const char* name)
 
 void DelContact(struct Contact* pc)
 {
+	assert(pc);
+
 	if (pc->sz == 0)
 	{
 		printf("通讯录为空，无法删除\n");
@@ -210,6 +228,8 @@ void DelContact(struct Contact* pc)
 
 void SearchContact(const struct Contact* pc)
 {
+	assert(pc);
+
 	char name[NAME_MAX] = { 0 };
 	printf("输入要查找人的名字:>");
 	scanf("%s", name);
@@ -233,6 +253,8 @@ void SearchContact(const struct Contact* pc)
 
 void ModifyContact(struct Contact* pc)
 {
+	assert(pc);
+
 	char name[NAME_MAX] = { 0 };
 	printf("输入要修改人的名字:>");
 	scanf("%s", name);
@@ -254,6 +276,22 @@ void ModifyContact(struct Contact* pc)
 		printf("请输入新的地址:>");
 		scanf("%s", pc->data[pos].addr);
 	}
+}
+
+int SortByName(const void* e1, const void* e2)
+{
+	assert(e1 && e2);
+
+	return strcmp(((struct PeoInfo*)e1)->name, ((struct PeoInfo*)e2)->name);
+}
+
+void SortContact(struct Contact* pc)
+{
+	assert(pc);
+	//按照名字来排序
+
+	qsort(pc->data, pc->sz, sizeof(pc->data[0]), SortByName);
+	printf("已经按照名字排序\n");
 }
 
 void SaveContact(struct Contact* pc)

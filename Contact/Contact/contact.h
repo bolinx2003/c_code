@@ -12,6 +12,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 
 //描述人的信息
 struct PeoInfo
@@ -48,6 +49,9 @@ void AddContact(struct Contact* pc);
 
 //显示所有的联系人
 void ShowContact(struct Contact* pc);
+
+//排序通讯录内容
+void SortContact(struct Contact* ps);
 
 //删除指定联系人
 void DelContact(struct Contact* pc);

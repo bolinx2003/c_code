@@ -55,6 +55,9 @@ int main()
 		case SHOW:
 			ShowContact(&con);
 			break;
+		case SORT:
+			SortContact(&con);
+			break;
 		case EXIT:
 			//保存信息
 			SaveContact(&con);
