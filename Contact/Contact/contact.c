@@ -5,7 +5,8 @@
 //静态的版本
 //void InitContact(struct Contact* pc)
 //{
-//  assert(pc);
+//	assert(pc);
+//
 //	pc->sz = 0;//默认没有信息
 //	//memset(pc->data, 0, MAX*sizeof(struct PeoInfo));
 //	memset(pc->data, 0, sizeof(pc->data));
@@ -77,7 +78,7 @@ void InitContact(struct Contact* pc)
 //静态的版本
 //void AddContact(struct Contact* pc)
 //{
-//  assert(pc);
+//	assert(pc);
 // 
 //	struct PeoInfo tmp = {0};
 //
@@ -296,6 +297,8 @@ void SortContact(struct Contact* pc)
 
 void SaveContact(struct Contact* pc)
 {
+	assert(pc);
+
 	//打开文件
 	FILE* pf = fopen("contact.txt", "wb");
 	if (NULL == pf)
