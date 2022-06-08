@@ -2466,6 +2466,11 @@
 //}
 //
 
+//
+//memmove和memcpy的区别：
+//memmove 源头和目标的空间可以重合，memcpy不行
+//
+
 //模拟实现memcpy
 //#include <string.h>
 //#include <assert.h>
