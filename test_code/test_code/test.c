@@ -2509,3 +2509,100 @@
 //
 
 
+//一个数组中只有两个数字是出现一次，其他所有数字都出现了两次。
+//编写一个函数找出这两个只出现一次的数字。
+//int a = 0;
+//int b = 0;
+//
+//void find_single_dog(int arr[], int sz)
+//{
+//	int i = 0;
+//	int n = 0;
+//	for (i = 0; i < sz; i++)
+//	{
+//		n ^= arr[i];
+//	}
+//	for (i = 0; i < 32; i++)
+//	{
+//		if (((n >> i) & 1) == 1)
+//		{
+//			break;
+//		}
+//	}
+//	int j = 0;
+//	for (j = 0; j < sz; j++)
+//	{
+//		if (1 == ((arr[j] >> i) & 1))
+//		{
+//			a ^= arr[j];
+//		}
+//	}
+//	b = n ^ a;
+//}
+//
+//int main()
+//{
+//	int arr[] = { 1,1,2,3,4,4,3,5,6,8,7,8,7,6 };//5 2
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	find_single_dog(arr, sz);
+//	printf("%d %d", a, b);
+//
+//	return 0;
+//}
+
+
+//写一个宏，可以将一个整数的二进制位的奇数位和偶数位交换。
+
+//拿到奇数位，偶数位置0
+// 0101 0101 0101...
+// 0x 55 55 55 55
+
+//拿到偶数位，奇数位置0
+// 1010 1010...
+// 0x aa aa aa aa
+
+//#define SWAP(n) (n=(((n&0x55555555)<<1)+((n&0xaaaaaaaa)>>1)))
+//
+//int main()
+//{
+//	int n = 13;
+//	SWAP(n);
+//	printf("%d\n", n);
+//	//13 - 1101
+//	//14 - 1110 
+//	return 0;
+//}
+
+
+//
+//写一个宏，计算结构体中某变量相对于首地址的偏移，并给出说明
+//考察：offsetof宏的实现
+//
+//#include <stddef.h>
+//
+//#define my_offsetof(s, a) ((size_t)&(((s*)0)->a))
+//
+//typedef struct s
+//{
+//	char a;//0
+//	int i;//4~7
+//	double d;//8~15
+//} s;
+//
+//int main()
+//{
+//	printf("%d\n", my_offsetof(s, a));
+//	printf("%d\n", my_offsetof(s, i));
+//	printf("%d\n", my_offsetof(s, d));
+//
+//	return 0;
+//}
+//
+
+
+
+
+
+
+
+
