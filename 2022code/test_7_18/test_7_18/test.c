@@ -260,4 +260,32 @@
 //}
 //
 
+//
+//int missingNumber(int* nums, int numsSize)
+//{
+//	int x = 0;
+//	for (int i = 0; i < numsSize; ++i)
+//	{
+//		x ^= nums[i];
+//	}
+//	for (int j = 0; j <= numsSize; ++j)
+//	{
+//		x ^= j;
+//	}
+//	return x;
+//}
+//
+//int main()
+//{
+//	int arr[] = { 6,1,4,2,5,0 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int num = missingNumber(arr, sz);
+//	printf("%d\n", num);
+//
+//	return 0;
+//}
+//
+
+
+
 
