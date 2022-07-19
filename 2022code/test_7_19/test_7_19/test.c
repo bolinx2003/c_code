@@ -361,4 +361,84 @@
 //
 //
 
+//
+//long long Fac(size_t N)
+//{
+//	if (0 == N)
+//		return 1;
+//
+//	return Fac(N - 1) * N;
+//}
+//
+//long long Fib(size_t N)
+//{
+//	if (N < 3)
+//		return 1;
+//
+//	return Fib(N - 1) + Fib(N - 2);
+//}
+//
+//void f1()
+//{
+//	int a = 0;
+//	printf("%p\n", &a);
+//}
+//
+//void f2()
+//{
+//	int a = 0;
+//	printf("%p\n", &a);
+//}
+//
+//int main()
+//{
+//	//printf("%lld\n", Fac(10000));
+//	//printf("%lld\n", Fib(50));
+//
+//	f1();
+//	f2();
+//
+//	return 0;
+//}
+
+//
+//
+//void reverse(int* nums, int left, int right)
+//{
+//	while (left < right)
+//	{
+//		int tmp = nums[left];
+//		nums[left] = nums[right];
+//		nums[right] = tmp;
+//		++left;
+//		--right;
+//	}
+//}
+//
+//void rotate(int* nums, int numsSize, int k)
+//{
+//	k %= numsSize;
+//	//前n-k个
+//	reverse(nums, 0, numsSize - k - 1);
+//	//后k个
+//	reverse(nums, numsSize - k, numsSize - 1);
+//	//整体
+//	reverse(nums, 0, numsSize - 1);
+//}
+//
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	rotate(arr, sz, 4);
+//	int i = 0;
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//
+//	return 0;
+//}
+//
+//
 
